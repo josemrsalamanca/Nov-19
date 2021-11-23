@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CheckRegisterDetailsFragment">
+
+    <fragment
+        android:id="@+id/CheckRegisterDetailsFragment"
+        android:name="com.example.a20nov.CheckRegisterDetailsFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_check_register_details">
+        <action
+            android:id="@+id/action_CheckRegisterDetailsFragment_to_CheckRegisterListFragment"
+            app:destination="@id/CheckRegisterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CheckRegisterListFragment"
+        android:name="com.example.a20nov.CheckRegisterListFragment"
+        android:label="Listado"
+        tools:layout="@layout/fragment_check_register_list">
+        <action
+            android:id="@+id/action_CheckRegisterListFragment_to_CheckRegisterDetailsFragment"
+            app:destination="@id/CheckRegisterDetailsFragment" />
+    </fragment>
+</navigation>
